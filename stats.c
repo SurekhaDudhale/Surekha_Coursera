@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief display the input data array and calculate median, mean, max and min value of data array
  *
- * <Add Extended Description Here>
+ * Includes functions that can analyze an array of unsigned char data items and report analytics on the maximum, minimum, mean, and median of the data set
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Surekha Dudhale
+ * @date 6/5/2020
  *
  */
 
@@ -23,9 +23,20 @@
 
 #include <stdio.h>
 #include "stats.h"
+#include<math.h>
 
 /* Size of the Data Set */
 #define SIZE (40)
+
+
+
+
+
+
+/*****************************************************************************
+Following function main fucntion
+/*****************************************************************************/
+
 
 void main() {
 
@@ -35,9 +46,11 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+
+/* Statistics and Printing Functions Go Here */
+
+/* Other Variable Declarations Go Here */
+
+  
 
 }
-
-/* Add other Implementation File Code Here */

@@ -24,17 +24,82 @@
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief print the input array data on screem
+ * 
+ * Given a char data array and size of data array is provided
  *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return void
  */
+
+void print_array(unsigned char test[],unsigned int SIZE1);
+
+/**
+ * @brief sort the elements of data array 
+ *
+ * 
+ * Given a char data array and size of data array is provided
+ *
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return void
+ */
+
+void sort_array(unsigned char test[],unsigned int SIZE1);
+
+/**
+ * @brief find the median of elements of data array 
+ *
+ * 
+ * Given a char data array and size of data array is provided
+ *
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return unsigned char
+ */
+unsigned char find_median(unsigned char test[],unsigned int SIZE1);
+/**
+ * @brief find mean value of elements of data array 
+ *
+ * 
+ * Given a char data array and size of data array is provided
+ *
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return unsigned char
+ */
+unsigned char find_mean(unsigned char test[],unsigned int SIZE1);
+
+/**
+ * @brief find max value from the elements of data array 
+ *
+ * 
+ * Given a char data array and size of data array is provided
+ *
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return unsigned char
+ */
+unsigned char find_maximum(unsigned char test[]);
+
+/**
+ * @brief find minimum value from the elements of data array 
+ *
+ * 
+ * Given a char data array and size of data array is provided
+ *
+ * @param test data aaray
+ * @param SIZE1 size of data array
+ * 
+ * @return unsigned char
+ */
+unsigned char find_minimum(unsigned char test[],unsigned int SIZE1);
 
 
 #endif /* __STATS_H__ */
