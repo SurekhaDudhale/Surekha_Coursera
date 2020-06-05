@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file stats.c
- * @brief display the input data array and calculate median, mean, max and min value of data array
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * Includes functions that can analyze an array of unsigned char data items and report analytics on the maximum, minimum, mean, and median of the data set
+ * <Add Extended Description Here>
  *
- * @author Surekha Dudhale
- * @date 6/5/2020
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 
@@ -28,6 +28,90 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
+/*****************************************************************************
+Following funcion is to print array on scarren
+
+/*****************************************************************************/
+void print_array(unsigned char test[],unsigned int SIZE1){
+int i=0;
+printf("\nGiven array----------------------- :");
+for (i=0;i<SIZE1;i++)
+{printf("\n  %d->%d",i,test[i]);}
+} 
+
+/*****************************************************************************
+Following function is to sort array in descending order
+/*****************************************************************************/
+
+void sort_array(unsigned char test[],unsigned int SIZE1)
+{int i=0;
+int j=0;
+unsigned char temp = 0;
+
+ for(i=0;i<SIZE1;i++)
+ { 
+   for(j=0;j<(SIZE1-1);j++)
+   {
+    if (test[j]>test[j+1])
+      {
+         temp = test[j];
+         test[j] = test[j+1];
+         test[j+1] = temp;
+      }        
+   }
+ 
+ }
+
+}
+
+/*****************************************************************************
+Following function is to find median value of dataset
+/*****************************************************************************/
+
+unsigned char find_median(unsigned char test[],unsigned int SIZE1)
+{
+unsigned char median = 0;
+
+if(SIZE1%2 ==0)
+{ median = (test[SIZE1/2]+test[(SIZE1/2)-1])/2;}
+else   
+  { median = test[(SIZE1/2)+1];}
+return median;
+}
+
+/*****************************************************************************
+Following function is to find mean value of dataset
+/*****************************************************************************/
+
+unsigned char find_mean(unsigned char test[],unsigned int SIZE1)
+{unsigned char mean =0;
+int sum = 0;
+int i =0;
+ for(i=0;i<SIZE1;i++)
+  { sum = sum+test[i];}
+ mean = sum/SIZE1;
+return mean;
+}
+
+/*****************************************************************************
+Following function is to find max value of dataset
+/*****************************************************************************/
+unsigned char find_maximum(unsigned char test[])
+{ unsigned char max =0;
+ max = test[0];
+return max;
+}
+
+
+/*****************************************************************************
+Following function is to find min value of dataset
+/*****************************************************************************/
+
+unsigned char find_minimum(unsigned char test[],unsigned int SIZE1)
+{unsigned  char min =0;
+ min = test[SIZE1-1];
+return min;
+}
 
 
 
@@ -46,11 +130,22 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
+  /* Other Variable Declarations Go Here */
+void print_statistics(){
 
-/* Statistics and Printing Functions Go Here */
-
-/* Other Variable Declarations Go Here */
-
-  
+printf("\nMedian value of dataset :%d",find_median(test, SIZE));
+printf("\nMean value of dataset :%d",find_mean(test, SIZE));
+printf("\nMax value of dataset :%d",find_maximum(test));
+printf("\nMin value of dataset :%d\n",find_minimum(test, SIZE));
+}
+  /* Statistics and Printing Functions Go Here */
+print_array(test,SIZE);
+sort_array(test,SIZE);
+/*print_array(test,SIZE);*/
+print_statistics();
 
 }
+
+
+
+
